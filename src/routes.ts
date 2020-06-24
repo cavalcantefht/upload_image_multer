@@ -10,7 +10,12 @@ const upload = multer(multerConfig)
 const routes = express.Router()
 const uploadsController = new UploadsController()
 
-routes.get('/', uploadsController.index)
+routes.get('/', (req, res) => {
+  return res.json({
+    message: 'Run app'
+  })
+})
+routes.get('/uploads', uploadsController.index)
 routes.post('/upload',
   upload.single('image'),
   uploadsController.store

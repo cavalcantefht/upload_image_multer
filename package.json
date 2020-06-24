@@ -7,7 +7,7 @@
     "start": "node dist/server.js",
     "dev": "ts-node-dev --ignore-watch node_modules --no-notify src/server.ts",
     "build": "tsc --project tsconfig.json",
-    "knex:migrate": "yarn knex --knexfile knexfile.ts migrate:latest"
+    "knex:migrate": "yarn knex --knexfile src/knexfile.ts migrate:latest"
   },
   "dependencies": {
     "cors": "^2.8.5",
